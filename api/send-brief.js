@@ -36,6 +36,7 @@ module.exports = async (req, res) => {
   // while testing, remove it once you go live).
   const allowedOrigins = [
     "https://viewmdbltd.com",
+    "https://vercel.com/hannas04s-projects/mdb-org",
     "https://www.viewmdbltd.com",
     "http://127.0.0.1:5500",   // Live Server, for local testing — remove later
     "http://localhost:5500"
