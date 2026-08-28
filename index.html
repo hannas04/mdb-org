@@ -295,6 +295,7 @@ em{ font-style:italic; color:var(--bronze); }
 }
 @keyframes scrollLine{ 0%{ top:-100%; } 60%{ top:100%; } 100%{ top:100%; } }
 @media(max-width:760px){ .hero__scroll{ display:none; } }
+@media(max-width:380px){ .eyebrow{ flex-wrap:wrap; row-gap:8px; } }
 
 /* =========================================================
    MARQUEE
@@ -451,6 +452,7 @@ section{ position:relative; }
   .intake__inner{ padding:42px 22px; }
   .intake__compass{ width:130vw; height:130vw; opacity:.28; }
   .intake h2{ font-size:clamp(34px,10vw,48px); line-height:1.05; }
+  .intake .btn--lg{ width:100%; padding-left:12px; padding-right:12px; white-space:normal; }
 }
 
 /* =========================================================
@@ -463,6 +465,7 @@ section{ position:relative; }
 }
 @media(min-width:840px){ .site-footer__top{ grid-template-columns:1.2fr 2fr; } }
 .site-footer__brand{ display:flex; gap:14px; align-items:flex-start; }
+.site-footer__brand > div, .site-footer__cols > div{ min-width:0; }
 .site-footer__brand .brand__text{ font-size:22px; margin-bottom:8px; }
 .site-footer__tagline{ color:rgba(255,255,255,0.72); font-size:13.5px; max-width:260px; }
 .site-footer__cols{ display:grid; grid-template-columns:repeat(3,1fr); gap:30px; }
@@ -471,9 +474,15 @@ section{ position:relative; }
   margin-bottom:18px; font-weight:400;
 }
 .site-footer__cols a, .site-footer__cols span{
-  display:block; color:rgba(255,255,255,0.72); font-size:13.5px; margin-bottom:12px; transition:color .3s var(--ease);
+  display:block; color:rgba(255,255,255,0.72); font-size:13.5px; margin-bottom:12px; transition:color .3s var(--ease); overflow-wrap:anywhere;
 }
 .site-footer__cols a:hover{ color:#FFFFFF; }
+@media(max-width:600px){
+  .site-footer{ padding-left:18px; padding-right:18px; }
+  .site-footer__top{ gap:38px; }
+  .site-footer__cols{ grid-template-columns:1fr; gap:22px; }
+  .site-footer__bottom{ flex-direction:column; align-items:flex-start; }
+}
 .site-footer__bottom{
   max-width:var(--container); margin:0 auto; padding:26px 0 40px;
   display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between;
